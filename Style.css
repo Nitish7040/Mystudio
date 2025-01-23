@@ -170,9 +170,12 @@ nav{
     }
     
 }
+
+
 #page2 {
     min-height: 100vh;
     width: 100%;
+    position: relative;
     /* background-color: red; */
 }
 
@@ -221,4 +224,118 @@ nav{
 }
 
 
+#page2-bottom{
+    /* background-color: aqua; */
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5vw;
+    position: relative;
+    z-index: 9;
+ }
 
+ #page2-bottom h1{
+    font-size: 3vw;
+    width: 50%;
+    font-weight: 900;
+ }
+
+ #bottom-part2{
+    width: 25%;
+ }
+ #bottom-part2 img{
+    width: 100%;
+    /* height: 100px; */
+    border-radius: 20px;
+ }
+ #bottom-part2 p{
+    font-weight: 50;
+    font-size: 1.2vw;
+    margin-top: 0.5vw;
+ }
+
+ #page2 #gooey{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    top: 58%;
+    left: 25%;
+    border-radius: 50%;
+background: linear-gradient(to top right,#ff3107,#ff671b);
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+ }
+
+@keyframes gooey {
+    from{
+        transform: translate(10%, -10%) skew(0);
+    } to{
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}   
+
+
+#page3{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: #EFEAE3; */
+    /* position: relative; */
+    padding: 4vw 0 ;
+
+    
+}
+
+.elem{
+    height: 150px;
+    width: 100%;
+   
+    border-bottom: 1px solid rgba(33, 32, 32, 0.527);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+
+
+}
+
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .overlay{
+ height: 100%;
+ width: 100%;
+ background-color: orange;
+ position: absolute;
+ top: -100%;
+ left: 0;
+ transition: all ease 0.2s;
+
+}
+.elem:hover .overlay{
+    top: 0;
+    /* transition: 0.5s; */
+}
+
+#fixed-img{
+    height: 30vw;
+    width: 24vw;
+    /* background-color: #fe320a; */
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    top: 25%;
+    left: 50%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
