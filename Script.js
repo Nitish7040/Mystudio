@@ -5,7 +5,8 @@ const scroll = new LocomotiveScroll({
     smooth: true 
 });
 
-var elemC = document.querySelector("#elem-container")
+function page4animation(){
+    var elemC = document.querySelector("#elem-container")
 var fixed = document.querySelector("#fixed-img")
 
   elemC.addEventListener("mouseenter",()=>{
@@ -28,3 +29,28 @@ elems.forEach((e)=>{
     })
     
 })
+
+}
+// swipper script code
+
+function swiperAnimation() {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 100,
+    });
+}
+
+function loaderanimation(){
+
+var loader = document.querySelector("#loader") 
+    setTimeout(function(){
+     // console.log("hello");
+      loader.style.top = "-100%"  
+            
+         },4500)
+}
+
+swiperAnimation()
+page4animation()
+loaderanimation()
