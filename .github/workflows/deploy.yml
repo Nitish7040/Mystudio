@@ -22,7 +22,7 @@ jobs:
         uses: actions/configure-pages@v4  # Latest version of configure-pages
 
       - name: Upload website files
-        uses:  actions/upload-pages-artifact@v4  # Updated to latest stable version
+        uses:   actions/upload-pages-artifact@v2   # Updated to latest stable version
         with:
           path: ./  # Change this if your site files are in a subfolder like 'dist' or 'public'
 
