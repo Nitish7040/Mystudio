@@ -3,7 +3,7 @@ name: Deploy Static Website to GitHub Pages
 on:
   push:
     branches:
-      - Master  # Change this if your branch name is different
+      - Master # Adjust if your default branch is different
 
 jobs:
   deploy:
@@ -17,6 +17,9 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload website files
-        uses: actions/upload-pages-artifact@v4  
+        uses: actions/upload-pages-artifact@v1  # Latest available version
+        with:
+          path: ./  # Adjust the path to your static files if necessary
+
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4  # Ensure you're using v4 or newer
