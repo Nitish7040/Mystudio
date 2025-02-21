@@ -24,7 +24,7 @@ jobs:
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3  # Updated to latest stable version
         with:
-          path: ./  # Change this if your site files are in a subfolder like 'dist' or 'public'
+          path: ./  # Ensure this matches the root directory where your HTML, CSS, and JS files are located
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2  # Latest version for deployment
