@@ -3,7 +3,7 @@ name: Deploy Static Website to GitHub Pages
 on:
   push:
     branches:
-      - Master # Or master, or whatever your main branch is named
+      - Master  # Ensure this matches your actual branch name (GitHub is case-sensitive)
 
 permissions:
   contents: read
@@ -13,33 +13,18 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Build website (if needed)
-        # Add a build step here if you have a build process
-        # For example, if you use Jekyll, Hugo, or a similar static site generator:
-        # run: bundle exec jekyll build
-        # Or for a simple HTML site with no build process, you can skip this.
+        uses: actions/checkout@v4  # Correct action to checkout your repo
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v4  # Latest version of configure-pages
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload website files
+        uses: actions/upload-pages-artifact@v3  # Updated to latest stable version
         with:
-          path: ./ # Or ./_site or ./public or ./dist, depending on your build output
-          # If you have a specific directory for your static files, change this path.
+          path: ./  # Change this if your site files are in a subfolder like 'dist' or 'public'
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
-
-      - name: Print deployment status
-        if: always()
-        run: |
-          echo "Deployment status: ${{ steps.deployment.outcome }}"
-          if ${{ steps.deployment.outcome }} == 'failure' {
-            echo "Deployment failed. Check the logs for more details."
-          }
+        uses: actions/deploy-pages@v2  # Latest version for deployment
