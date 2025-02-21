@@ -3,7 +3,7 @@ name: Deploy Static Website to GitHub Pages
 on:
   push:
     branches:
-      - Master  # Make sure this matches your actual default branch
+      - Master  # Ensure this matches your actual branch name (GitHub is case-sensitive)
 
 jobs:
   deploy:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # Correct action to checkout your repo
+        uses: actions/checkout@v4  # Correct action to checkout your repo
 
       - name: Setup Pages
         uses: actions/configure-pages@v4  # Latest version of configure-pages
@@ -19,7 +19,7 @@ jobs:
       - name: Upload website files
         uses: actions/upload-pages-artifact@v2  # Updated to latest stable version
         with:
-          path: ./  # Change this to your build output directory if needed
+          path: ./  # Change this if your site files are in a subfolder like 'dist' or 'public'
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2  # Ensure latest version is used
+        uses: actions/deploy-pages@v2  # Latest version for deployment
