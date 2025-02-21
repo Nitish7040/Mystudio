@@ -27,4 +27,4 @@ jobs:
           path: ./  # Change this if your site files are in a subfolder like 'dist' or 'public'
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2  # Latest version for deployment
+        uses: actions/deploy-pages@v4  # Latest version for deployment
