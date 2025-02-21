@@ -58,7 +58,7 @@ nav{
     left: 0;
     bottom: -100%;
     border-radius: 50px;
-    transition: all ease 0.3s;
+    /* transition: all ease 0.3s; */
     /* overflow: hidden; */
 }
 
@@ -155,7 +155,7 @@ nav h3{
     animation-timing-function: linear;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    linegra
+ 
 
 }
 
@@ -366,7 +366,7 @@ background: linear-gradient(to top right,#ff3107,#ff671b);
 
 
 #page5{
-    height: 100vh;
+    height: 160vh;
     width: 100%;
     /* background-color: #EFEAE3; */
 }
@@ -386,10 +386,15 @@ background: linear-gradient(to top right,#ff3107,#ff671b);
 }
 
 #footer h1 {
-    font-size: 23vw;
+    font-size: 15vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
 }
 
 #footer-div {
+    display: flex;
     height: 20vh;
     width: 100%;
     background-color: red;
