@@ -3,7 +3,7 @@ name: Deploy Static Website to GitHub Pages
 on:
   push:
     branches:
-      - Master  # Ensure this matches your actual branch name (GitHub is case-sensitive)
+      - master  # Ensure this matches your actual branch name (GitHub is case-sensitive)
 
 permissions:
   contents: read
