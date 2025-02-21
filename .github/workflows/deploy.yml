@@ -16,15 +16,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # Correctly checkout repo
+        uses: actions/checkout@v4  # Correct action to checkout your repo
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4  # Latest version
+        uses: actions/configure-pages@v4  # Latest version of configure-pages
 
       - name: Upload website files
-        uses: actions/upload-pages-artifact@v2  # ✅ Correct action for GitHub Pages
+        uses: actions/upload-artifact@v4  # Updated to latest stable version
         with:
-          path: ./  # Adjust if your site files are in a subfolder like 'dist' or 'public'
+          path: ./  # Change this if your site files are in a subfolder like 'dist' or 'public'
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2  # Correct action for deploying GitHub Pages
+        uses: actions/deploy-pages@v2  # Latest version for deployment
